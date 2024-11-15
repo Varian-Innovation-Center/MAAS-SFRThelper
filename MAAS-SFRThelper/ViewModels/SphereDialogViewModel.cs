@@ -618,6 +618,12 @@ namespace MAAS_SFRThelper.ViewModels
                 return;
             }
 
+            if (target.IsEmpty == true)
+            {
+                MessageBox.Show("PTV volume is 0. Unable to create spheres.");
+                return;
+            }
+
             // Generate a regular grid accross the dummie bounding box 
             var bounds = target.MeshGeometry.Bounds;
 
